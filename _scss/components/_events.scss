@@ -1,0 +1,76 @@
+figure.event {
+  width: 100%;
+  background-color: rgba(3,3,3,0.5);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include when-on-desktop {
+    width: auto;
+  }
+
+  a {
+  }
+  img {
+    max-width: 300px;
+  }
+  figcaption {
+    width: inherit;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      font-weight: bold;
+    }
+
+    time {
+
+    }
+    p {
+      margin: 0 !important;
+      text-align: center;
+    }
+  }
+
+  &.afties {
+    figcaption {
+      align-items: flex-start;
+      justify-content: space-between;
+      .event-link {
+        color: $highlight;
+      }
+      .playing {
+        margin-bottom: 1rem !important;
+        min-height: 4rem;  
+        padding: 0;
+
+        li {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+      }
+      time {
+        color: $highlight;
+      }
+    }
+  }
+
+}
+
+ul.event-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none;
+
+  li {
+
+  }
+}
+
+table.past-events {
+  background-color: rgba(3,3,3,0.7)
+}

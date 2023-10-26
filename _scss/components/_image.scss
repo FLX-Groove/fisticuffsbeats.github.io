@@ -1,0 +1,104 @@
+figure.polaroid {
+	.frame {
+		padding-bottom: 0;
+		overflow: hidden;
+		text-align: center;
+
+		img {
+			margin: 0 auto;
+			height: 100%;
+			max-width: 100%;
+		}		
+	}
+
+	figcaption {
+		height: 3.5rem;
+		font-family: "Permanent Marker";
+		text-align: right;
+		color: white;
+	}
+}
+@include when-on-tablet {
+	figure.polaroid {
+		margin: 2rem;
+		background-color: white;
+		border-right: 3px solid rgba(6,6,6,0.7);
+		border-bottom: 4px solid rgba(4,4,4,0.7);
+
+		.frame {
+			border: 1.5rem #EEE solid;
+			padding-bottom: 0;
+			overflow: hidden;
+			width: 300px;
+			height: 300px;
+			text-align: center;
+
+			img {
+				margin: 0 auto;
+				height: 100%;
+				max-width: inherit;
+			}		
+		}
+
+		figcaption {
+			width: 300px;
+			height: 3.5rem;
+			background-color: #EEE;
+			font-family: "Permanent Marker";
+			text-align: center;
+			color: $rich-black;
+		}
+
+		&.tilted {
+			transform: rotate(15deg)
+		}
+
+		&.pull-right {
+			float: right;
+		}
+
+	}
+}
+
+@include when-on-desktop {
+	figure.polaroid {
+		margin: 2rem;
+		background-color: white;
+		border-right: 3px solid rgba(6,6,6,0.7);
+		border-bottom: 4px solid rgba(4,4,4,0.7);
+
+		.frame {
+			border: 1.5rem #EEE solid;
+			padding-bottom: 0;
+			overflow: hidden;
+			width: 300px;
+			height: 300px;
+			text-align: center;
+
+			img {
+				margin: 0 auto;
+				height: 100%;
+				max-width: inherit;
+			}		
+		}
+
+		figcaption {
+			width: 300px;
+			height: 3.5rem;
+			background-color: #EEE;
+			font-family: "Permanent Marker";
+			text-align: center;
+			color: $rich-black;
+		}
+
+		&.tilted {
+			transform: rotate(15deg)
+		}
+
+		&.pull-right {
+			float: right;
+		}
+
+	}
+}
+

@@ -1,0 +1,87 @@
+/**
+ * Layout
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+main {
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  
+  @include when-on-tablet {
+    flex-direction: row-reverse;  
+  }
+
+  header {
+
+    h1 {
+      font-size: 5rem;
+      text-align: center;
+    }
+  }
+
+  section#content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    p {
+      margin-left: 2rem;
+    }
+    // Hide page titles on small breakpoints
+    
+    h3 {
+      display: inline-block;
+      background-color: $rich-black;
+      padding: 0.5rem 2rem 0.25rem 1.5rem;
+      transform: rotate(-3deg);
+    }
+
+    @include when-on-tablet {
+      h2 {
+        text-indent: 3rem;
+        margin-bottom: 4rem;
+        display: inline-block;
+        background-color: $rich-black;
+        padding: 0.5rem 2rem 0.25rem 1.5rem;
+        transform: rotate(-3deg);
+      }
+    }
+
+    @include when-on-desktop {
+      margin-top: 4rem;
+    
+      h2 {
+        margin-left: -2rem;
+      }
+    }
+
+    .box {
+      @include when-on-tablet {
+        border-radius: 32px;  
+      }
+    }
+
+    .overlay {
+      background-color: rgba(0,0,0,0.5);  
+
+      &.darker {
+        background-color: rgba(0,0,0,0.75);
+      }
+    }
+  }
+}
+
+
+
+
+
+
